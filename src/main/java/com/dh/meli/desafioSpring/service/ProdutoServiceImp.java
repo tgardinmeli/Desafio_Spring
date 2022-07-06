@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class ProdutoServiceImp implements ProdutoService{
@@ -22,11 +23,28 @@ public class ProdutoServiceImp implements ProdutoService{
 
     @Override
     public List<ProdutoDto> getAllProdutosDisponiveis() {
-        return null;
+        List<Produto> listaDisponiveis = produtoRepo.getAll();
+        List<ProdutoDto> listaDisponiveisDto = null;
+        try{
+            listaDisponiveisDto = listaDisponiveis.stream()
+                    .filter(p -> p.getQuantity() > 0 )
+                    .map(ProdutoDto::new)
+                    .collect(Collectors.toList());
+
+        } catch(Exception exception){
+
+        }
+        return listaDisponiveisDto;
     }
 
     @Override
     public List<ProdutoDto> getAllCategoria(String categoria) {
         return null;
+    }
+
+    @Override
+    public List<ProdutoDto> getAll(){
+        List<ProdutoDto> listaDto = produtoRepo.getAll().stream().map(ProdutoDto::new).collect(Collectors.toList());
+        return listaDto;
     }
 }

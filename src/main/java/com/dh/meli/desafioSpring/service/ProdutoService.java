@@ -9,5 +9,6 @@ public interface ProdutoService {
     void cadastrarProduto(Produto produto);
     List<ProdutoDto> getAllProdutosDisponiveis();
     List<ProdutoDto> getAllCategoria(String categoria);
+    List<ProdutoDto> getAll();
 
 }

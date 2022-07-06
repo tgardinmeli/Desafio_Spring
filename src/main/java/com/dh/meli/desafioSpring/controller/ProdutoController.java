@@ -23,15 +23,20 @@ public class ProdutoController {
 
     }
 
-    @GetMapping("/articles")
+    @GetMapping("/articles?") // gambiarra!
     public ResponseEntity<ProdutoDto> getAllCategoria(@RequestParam String categoria){
+
         return null;
     }
 
     @GetMapping("/articles")
     public ResponseEntity<List<ProdutoDto>> getAllProdutosDisponiveis() {
-        return null;
+        return ResponseEntity.ok(service.getAllProdutosDisponiveis());
     }
 
+    @GetMapping("/articles/all")
+    public ResponseEntity<List<ProdutoDto>> getAll(){
+        return ResponseEntity.ok(service.getAll());
+    }
 
 }
