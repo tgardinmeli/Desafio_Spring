@@ -24,15 +24,14 @@ public class ProdutoController {
 
     }
 
-    @GetMapping("/articles?") // gambiarra!
-    public ResponseEntity<ProdutoDto> getAllCategoria(@RequestParam String categoria){
-
-        return null;
-    }
-
     @GetMapping("/articles")
     public ResponseEntity<List<ProdutoDto>> getAllProdutosDisponiveis() {
         return ResponseEntity.ok(service.getAllProdutosDisponiveis());
+    }
+
+    @GetMapping("/articles/") // gambiarra autorizada pelo Mauri!
+    public ResponseEntity<List<ProdutoDto>> getAllCategoria(@RequestParam String category){
+        return ResponseEntity.ok(service.getAllCategoria(category));
     }
 
     @GetMapping("/articles/all")

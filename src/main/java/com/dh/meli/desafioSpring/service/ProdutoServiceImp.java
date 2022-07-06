@@ -39,7 +39,18 @@ public class ProdutoServiceImp implements ProdutoService{
 
     @Override
     public List<ProdutoDto> getAllCategoria(String categoria) {
-        return null;
+        List<Produto> listaCategoria = produtoRepo.getAll();
+        List<ProdutoDto> listaCategoriaDto = null;
+        try{
+            listaCategoriaDto = listaCategoria.stream()
+                    .filter(p -> p.getCategory().equalsIgnoreCase(categoria) )
+                    .map(ProdutoDto::new)
+                    .collect(Collectors.toList());
+
+        } catch(Exception exception){
+
+        }
+        return listaCategoriaDto;
     }
 
     @Override
