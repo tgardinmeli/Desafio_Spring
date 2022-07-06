@@ -18,7 +18,7 @@ public class ProdutoServiceImp implements ProdutoService{
 
     @Override
     public void cadastrarProduto(Produto produto) {
-
+            produtoRepo.cadastrarProduto(produto);
     }
 
     @Override
@@ -47,4 +47,5 @@ public class ProdutoServiceImp implements ProdutoService{
         List<ProdutoDto> listaDto = produtoRepo.getAll().stream().map(ProdutoDto::new).collect(Collectors.toList());
         return listaDto;
     }
+
 }

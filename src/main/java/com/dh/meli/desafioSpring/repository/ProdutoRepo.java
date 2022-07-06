@@ -1,7 +1,9 @@
 package com.dh.meli.desafioSpring.repository;
 
 import com.dh.meli.desafioSpring.model.Produto;
+import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectWriter;
 import org.springframework.stereotype.Repository;
 
 import java.io.File;
@@ -16,22 +18,19 @@ public class ProdutoRepo {
     private final String LINKFILE = "src/main/resources/produtos.json";
 
     public void cadastrarProduto(Produto produto) {
+        ObjectMapper mapper = new ObjectMapper();
+        ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());
+        List<Produto> listaAtual = getAll();
+        try {
+            List<Produto> listaCopia = new ArrayList<>(listaAtual);
+            listaCopia.add(produto);
+            writer.writeValue(new File(LINKFILE), listaCopia);
 
-    }
-
-    public List<Produto> getAllProdutosDisponiveis() {
-        List<Produto> listaDisponiveis = getAll();
-        try{
-             listaDisponiveis = listaDisponiveis.stream().filter(p -> p.getQuantity() > 0).collect(Collectors.toList());
-
-
-        } catch(Exception ex){
-
+        } catch (Exception exception){
+        System.out.println("PRODUTO NÃO CADASTRADO! ERRO!");
         }
 
-        return null;
     }
-
 
     public List<Produto> getAllCategoria(String categoria) {
         return null;
