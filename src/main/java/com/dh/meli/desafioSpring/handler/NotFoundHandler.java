@@ -11,18 +11,14 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class NotFoundHandler {
 
     @ExceptionHandler(NotFoundException.class) // pega a classe do Not found generico
-    public ResponseEntity<ExceptionsDetails> handlerNotFound(NotFoundException exception){
+    public ResponseEntity<ExceptionsDetails> handlerNotFound(NotFoundException exception) {
         return new ResponseEntity<>(
-            ExceptionsDetails.builder()
-                .erro("Produto não encontrato")
-                .statusHttp(HttpStatus.NOT_FOUND.value())
-                .mensagem(exception.getMessage())
-                .build(),
-                HttpStatus.N
-    }
-
-        )
-
+                ExceptionsDetails.builder()
+                        .erro("Produto não encontrato")
+                        .statusHttp(HttpStatus.NOT_FOUND.value())
+                        .mensagem(exception.getMessage())
+                        .build(),
+                HttpStatus.NOT_FOUND);
     }
 }
 

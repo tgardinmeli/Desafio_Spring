@@ -1,7 +1,6 @@
 package com.dh.meli.desafioSpring.repository;
 
-import com.dh.meli.desafioSpring.dto.ProdutoDto;
-import com.dh.meli.desafioSpring.model.Produtos;
+import com.dh.meli.desafioSpring.model.Produto;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -11,16 +10,16 @@ public class ProdutoRepo {
 
     private final String LINKFILE = "src/main/resources/produtos.json";
 
-    public void cadastrarProduto(Produtos produto) {
+    public void cadastrarProduto(Produto produto) {
 
     }
 
-    public List<Produtos> getAllProdutosDisponiveis() {
+    public List<Produto> getAllProdutosDisponiveis() {
         return null;
     }
 
 
-    public List<Produtos> getAllCategoria(String categoria) {
+    public List<Produto> getAllCategoria(String categoria) {
         return null;
     }
 }

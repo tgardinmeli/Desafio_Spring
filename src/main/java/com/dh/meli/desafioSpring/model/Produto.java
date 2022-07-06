@@ -7,7 +7,7 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Produtos {
+public class Produto {
     private long productId;
     private String name;
     private String category;

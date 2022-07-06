@@ -1,7 +1,7 @@
 package com.dh.meli.desafioSpring.service;
 
 import com.dh.meli.desafioSpring.dto.ProdutoDto;
-import com.dh.meli.desafioSpring.model.Produtos;
+import com.dh.meli.desafioSpring.model.Produto;
 import com.dh.meli.desafioSpring.repository.ProdutoRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,7 +16,7 @@ public class ProdutoServiceImp implements ProdutoService{
 
 
     @Override
-    public void cadastrarProduto(Produtos produto) {
+    public void cadastrarProduto(Produto produto) {
 
     }
 

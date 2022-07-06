@@ -1,6 +1,6 @@
 package com.dh.meli.desafioSpring.dto;
 
-import com.dh.meli.desafioSpring.model.Produtos;
+import com.dh.meli.desafioSpring.model.Produto;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -13,7 +13,7 @@ public class ProdutoDto {
     private String category;
     private Double price;
 
-    public ProdutoDto(Produtos produto) {
+    public ProdutoDto(Produto produto) {
         this.name = produto.getName();
         this.category = produto.getCategory();
         this.price = produto.getPrice();
