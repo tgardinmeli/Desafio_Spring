@@ -20,8 +20,7 @@ public class ProdutoServiceImp implements ProdutoService{
 
 
     /**
-     * Chama o método de cadastro de produto
-     * do repositório de produtos.
+     * Chama o método em ProdutoRepo para cadastro de produto.
      * @param produto
      */
     @Override
@@ -144,7 +143,10 @@ public class ProdutoServiceImp implements ProdutoService{
 
 
     /**
-     *
+     * Inicia com a lista filtrada por categoria e frete grátis,
+     * e executa o método de ordenação de maneira diferente dependendo do
+     * valor do parâmetro order (0 - alfabético crescente, 1 - alfabético decrescente
+     * 2 - maior preço, 3 - menor preço.)
      * @param category
      * @param freeShipping
      * @param order
