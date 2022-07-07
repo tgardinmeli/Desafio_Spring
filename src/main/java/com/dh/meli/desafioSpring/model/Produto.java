@@ -2,6 +2,10 @@ package com.dh.meli.desafioSpring.model;
 
 import lombok.*;
 
+/**
+ * Classe Produto representa um produto com atributos de
+ * id, nome, categoria, marca, preço, quantidade, frete grátis e avaliação.
+ */
 @Data
 @Getter
 @Setter
