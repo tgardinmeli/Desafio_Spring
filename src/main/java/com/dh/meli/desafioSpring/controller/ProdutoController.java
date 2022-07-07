@@ -1,6 +1,7 @@
 package com.dh.meli.desafioSpring.controller;
 
 import com.dh.meli.desafioSpring.dto.ProdutoDto;
+import com.dh.meli.desafioSpring.dto.TicketDto;
 import com.dh.meli.desafioSpring.model.Produto;
 import com.dh.meli.desafioSpring.service.ProdutoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,7 +39,5 @@ public class ProdutoController {
     public ResponseEntity<List<ProdutoDto>> getAll(){
         return ResponseEntity.ok(service.getAll());
     }
-
-
 
 }
