@@ -11,12 +11,18 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
+
 public class CarrinhoCompras {
     private int id;
     private List<Produto> articles;
     private double total;
+    private static int contador = 1;
 
+    public CarrinhoCompras(List<Produto> articles, double total){
+        this.id = this.contador;
+        this.articles = articles;
+        this.total = total;
+        contador++;
+    }
 
 }
-

@@ -20,9 +20,8 @@ public class CarrinhoController {
     private CarrinhoService carrinhoService;
 
     @PostMapping("/purchase-request")
-    public ResponseEntity<List<TicketDto>> processarCompra
+    public ResponseEntity<TicketDto> processarCompra
             (@RequestBody List<RequestProdutoDto> articlesPurchaseRequest){
-        return null;
+        return ResponseEntity.ok(carrinhoService.processarCompra(articlesPurchaseRequest));
     }
-
 }
