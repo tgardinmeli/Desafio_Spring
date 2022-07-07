@@ -21,7 +21,6 @@ public class ProdutoController {
     @ResponseStatus(HttpStatus.OK)
     public void cadastrarProduto(@RequestBody Produto produto){
         service.cadastrarProduto(produto);
-
     }
 
     @GetMapping("/articles")
@@ -30,7 +29,8 @@ public class ProdutoController {
     }
 
     @GetMapping("/articles/") // gambiarra autorizada pelo Mauri!
-    public ResponseEntity<List<ProdutoDto>> getAllCategoria(@RequestParam String category){
+    public ResponseEntity<List<ProdutoDto>> getAllCategoria
+            (@RequestParam String category){
         return ResponseEntity.ok(service.getAllCategoria(category));
     }
 
@@ -39,6 +39,23 @@ public class ProdutoController {
         return ResponseEntity.ok(service.getAll());
     }
 
+    @GetMapping("/articles/filters")
+    public ResponseEntity<List<ProdutoDto>> getByCategoryAndFree
+            (@RequestParam String category, @RequestParam boolean freeShipping){
+        return ResponseEntity.ok(service.getByCategoryAndFree(category, freeShipping));
+    }
+
+    @GetMapping("/articles/filters/order")
+    public ResponseEntity<List<ProdutoDto>> getByCategoryFreeOrdered
+            (@RequestParam String category, @RequestParam boolean freeShipping, @RequestParam int order) {
+        return ResponseEntity.ok(service.getByCategoryFreeOrdered(category, freeShipping, order));
+    }
 
 
+
+    @GetMapping("/articles/filters/1")
+    public ResponseEntity<List<ProdutoDto>> getByCategoryAndPrestige
+            (@RequestParam String category, @RequestParam String prestige){
+        return ResponseEntity.ok(service.getByCategoryAndPrestige(category, prestige));
+    }
 }

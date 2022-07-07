@@ -10,5 +10,7 @@ public interface ProdutoService {
     List<ProdutoDto> getAllProdutosDisponiveis();
     List<ProdutoDto> getAllCategoria(String categoria);
     List<ProdutoDto> getAll();
-
+    List<ProdutoDto> getByCategoryAndFree(String category, boolean freeShipping);
+    List<ProdutoDto> getByCategoryAndPrestige(String category, String prestige);
+    List<ProdutoDto> getByCategoryFreeOrdered(String category, boolean freeShipping, int order);
 }
