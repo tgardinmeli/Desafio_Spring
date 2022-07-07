@@ -55,7 +55,9 @@ public class ProdutoServiceImp implements ProdutoService{
 
     @Override
     public List<ProdutoDto> getAll(){
-        List<ProdutoDto> listaDto = produtoRepo.getAll().stream().map(ProdutoDto::new).collect(Collectors.toList());
+        List<ProdutoDto> listaDto = produtoRepo.getAll()
+                .stream().map(ProdutoDto::new)
+                .collect(Collectors.toList());
         return listaDto;
     }
 

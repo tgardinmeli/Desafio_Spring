@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import java.util.HashMap;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 @Service
 public class CarrinhoServiceImp implements CarrinhoService{
@@ -30,7 +31,7 @@ public class CarrinhoServiceImp implements CarrinhoService{
         for(RequestProdutoDto produto : articlesPurchaseRequest){
             Long i = produto.getProductId();
             if(hash.containsKey(i)){
-                if(hash.get(i).getQuantity() <= produto.getQuantity()){
+                if(hash.get(i).getQuantity() < produto.getQuantity()){
                     return null ;
                 }
 
@@ -58,6 +59,7 @@ public class CarrinhoServiceImp implements CarrinhoService{
 
             CarrinhoCompras carrinho = new CarrinhoCompras(produtos, total);
             TicketDto ticket = new TicketDto(carrinho);
+            atualizarListaJson(hashRecebido, verificarProduto(articlesPurchaseRequest));
             return ticket;
         }
         else{
@@ -65,13 +67,19 @@ public class CarrinhoServiceImp implements CarrinhoService{
         }
     }
 
-//
-//    public void atualizarListaJson(List<Produto> produto){
-//        List<Produto> listaAntiga = produtoRepo.getAll();
-//        for(Produto produtoAtual : produto){
-//            listaAntiga.get(produto).setQuantity()
-//
-//        }
-//
-//    }
+    public void atualizarListaJson(HashMap<Long, Produto> hashModificado, HashMap<Long, Produto> hashOriginal) {
+        List<Produto> produtosAtualizados = new ArrayList<Produto>();
+        for(Long key : hashModificado.keySet()) {
+            if(hashModificado.get(key).getQuantity() !=  hashOriginal.get(key).getQuantity()) {
+                int quantidade = hashOriginal.get(key).getQuantity() - hashModificado.get(key).getQuantity();
+                hashOriginal.get(key).setQuantity(quantidade);
+                produtosAtualizados.add(hashOriginal.get(key));
+            } else {
+                produtosAtualizados.add(hashOriginal.get(key));
+            }
+        }
+
+        produtoRepo.atualizarListaProdutos(produtosAtualizados);
+        // escreve no json com lista produtosAtualizados
+    }
 }
