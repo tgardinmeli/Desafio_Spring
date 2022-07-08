@@ -66,8 +66,7 @@ public class ProdutoServiceImp implements ProdutoService{
         return listaDto;
     }
 
-<<<<<<< HEAD
-=======
+
     @Override
     public List<ProdutoDto> getByCategoryAndFree(String category, boolean freeShipping) {
         List<Produto> allProducts = produtoRepo.getAll();
@@ -117,7 +116,5 @@ public class ProdutoServiceImp implements ProdutoService{
                 return null;
         }
     }
->>>>>>> accb281b809da10f34c8ddedfcc7143b28294377
-
 }
 
