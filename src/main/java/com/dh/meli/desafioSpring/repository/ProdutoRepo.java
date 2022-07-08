@@ -42,11 +42,15 @@ public class ProdutoRepo {
 
     }
 
-    /**
-     * Retorna produtos por categoria?? Estamos usando??
-     */
-    public List<Produto> getAllCategoria(String categoria) {
-        return null;
+    public void atualizarListaProdutos(List<Produto> produtos) {
+        ObjectMapper mapper = new ObjectMapper();
+        ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());
+        try {
+            writer.writeValue(new File(LINKFILE), produtos);
+
+        } catch (Exception exception){
+            System.out.println("Deu ruim");
+        }
     }
 
     /**

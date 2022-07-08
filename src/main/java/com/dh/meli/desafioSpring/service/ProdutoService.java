@@ -10,7 +10,7 @@ import java.util.List;
  * Implementação na classe ProdutoServiceImp
  */
 public interface ProdutoService {
-    void cadastrarProduto(Produto produto);
+    ProdutoDto cadastrarProduto(Produto produto);
     List<ProdutoDto> getAllProdutosDisponiveis();
     List<ProdutoDto> getAllCategoria(String categoria);
     List<ProdutoDto> getAll();
