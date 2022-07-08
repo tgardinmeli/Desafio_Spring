@@ -19,7 +19,7 @@ public class ProdutoDto {
 
 
     /**
-     *
+     * Seta o ProdutoDto com informações do Produto.
      * @param produto
      */
     public ProdutoDto(Produto produto) {

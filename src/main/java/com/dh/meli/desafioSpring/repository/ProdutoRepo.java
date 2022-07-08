@@ -42,6 +42,10 @@ public class ProdutoRepo {
 
     }
 
+    /**
+     * Atualiza lista de produtos no arquivo json.
+     * @param produtos
+     */
     public void atualizarListaProdutos(List<Produto> produtos) {
         ObjectMapper mapper = new ObjectMapper();
         ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());

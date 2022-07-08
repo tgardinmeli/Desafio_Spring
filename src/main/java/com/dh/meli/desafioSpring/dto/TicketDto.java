@@ -8,10 +8,13 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 
+/**
+ * Receber o carrinho de compras do usuario (já conferido se tem os itens pedidos no estoque.
+ */
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class TicketDto { // receber o carrinho de compras do usuario (já conferido se tem os itens pedidos no estoque
+public class TicketDto { //
     private CarrinhoCompras ticket;
 }

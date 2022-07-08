@@ -7,9 +7,17 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
+/**
+ * Handler da exception NotFoundException
+ */
 @ControllerAdvice
 public class NotFoundHandler {
 
+    /**
+     *
+     * @param exception
+     * @return ResponseEntity<ExceptionsDetails>
+     */
     @ExceptionHandler(NotFoundException.class) // pega a classe do Not found generico
     public ResponseEntity<ExceptionsDetails> handlerNotFound(NotFoundException exception) {
         return new ResponseEntity<>(

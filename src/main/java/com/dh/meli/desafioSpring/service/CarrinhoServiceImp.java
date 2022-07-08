@@ -93,7 +93,8 @@ public class CarrinhoServiceImp implements CarrinhoService{
     }
 
     /**
-     * Atualiza quantidade de produtos na lista de produtos cadastrados.
+     * Atualiza quantidade de produtos na lista de produtos cadastrados,
+     * chama método em ProdutoRepo para atualizar arquivo produtos.json.
      * @param hashModificado
      * @param hashOriginal
      */

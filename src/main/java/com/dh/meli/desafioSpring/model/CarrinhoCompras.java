@@ -9,6 +9,9 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.util.List;
 
+/**
+ * Representa um carrinho (pedido) de compras.
+ */
 @Getter
 @Setter
 @NoArgsConstructor

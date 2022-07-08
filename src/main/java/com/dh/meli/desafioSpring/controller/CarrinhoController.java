@@ -20,6 +20,12 @@ public class CarrinhoController {
     @Autowired
     private CarrinhoService carrinhoService;
 
+    /**
+     * Recebe lista de produtos para compra do usuário,
+     * chama método processarCompra da camada de Service de Carrinho.
+     * @param articlesPurchaseRequest
+     * @return ResponseEntity<TicketDto>
+     */
     @PostMapping("/purchase-request")
     public ResponseEntity<TicketDto> processarCompra
             (@Valid @RequestBody List<RequestProdutoDto> articlesPurchaseRequest){
