@@ -27,7 +27,7 @@ public class ProdutoRepo {
             writer.writeValue(new File(LINKFILE), listaCopia);
 
         } catch (Exception exception){
-        System.out.println("PRODUTO NÃO CADASTRADO! ERRO!");
+            System.out.println("PRODUTO NÃO CADASTRADO! ERRO!");
         }
         return produto;
 

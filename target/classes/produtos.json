@@ -52,5 +52,31 @@
   "quantity" : 100,
   "freeShipping" : true,
   "prestige" : "*****"
-}
-]
+}, {
+  "productId" : null,
+  "name" : null,
+  "category" : null,
+  "brand" : null,
+  "price" : null,
+  "quantity" : null,
+  "freeShipping" : null,
+  "prestige" : null
+}, {
+  "productId" : null,
+  "name" : null,
+  "category" : null,
+  "brand" : null,
+  "price" : null,
+  "quantity" : null,
+  "freeShipping" : null,
+  "prestige" : null
+}, {
+  "productId" : 124,
+  "name" : "Solda",
+  "category" : "Test",
+  "brand" : "Black & Decker",
+  "price" : 350.0,
+  "quantity" : 0,
+  "freeShipping" : true,
+  "prestige" : "***"
+} ]
