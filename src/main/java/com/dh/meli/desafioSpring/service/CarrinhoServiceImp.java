@@ -33,11 +33,11 @@ public class CarrinhoServiceImp implements CarrinhoService{
             Long i = produto.getProductId();
             if(hash.containsKey(i)){
                 if(hash.get(i).getQuantity() < produto.getQuantity()){ // quantidade insuficiente
-                    throw new QuantityException();
+                    throw new QuantityException("Quantidade insuficiente no estoque");
                 }
 
             }else { // não encontrado
-                throw new NotFoundException();
+                throw new NotFoundException("Item não encontrado");
             }
         }
         return hash;
@@ -64,7 +64,7 @@ public class CarrinhoServiceImp implements CarrinhoService{
             return ticket;
         }
         else{
-            throw new NotFoundException();
+            throw new NotFoundException("Você não incluiu produtos no seu carrinho!");
         }
     }
 

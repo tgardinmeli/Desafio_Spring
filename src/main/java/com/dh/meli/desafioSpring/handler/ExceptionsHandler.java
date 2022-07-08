@@ -6,6 +6,7 @@ import com.dh.meli.desafioSpring.exception.QuantityException;
 import com.dh.meli.desafioSpring.exception.ExceptionsDetails;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
@@ -16,7 +17,7 @@ public class ExceptionsHandler {
     public ResponseEntity<ExceptionsDetails> handlerNotFound(NotFoundException exception) {
         return new ResponseEntity<>(
                 ExceptionsDetails.builder()
-                        .erro("Produto não encontrato")
+                        .erro("ERRO - NÃO ENCONTRADO")
                         .statusHttp(HttpStatus.NOT_FOUND.value())
                         .message(exception.getMessage())
                         .build(),
@@ -27,7 +28,7 @@ public class ExceptionsHandler {
     public ResponseEntity<ExceptionsDetails> handlerQuantityException(QuantityException exception){
         return new ResponseEntity<>(
                 ExceptionsDetails.builder()
-                .erro("Quantidade Insuficiente")
+                .erro("ERRO - QUANTIDADE")
                         .statusHttp(HttpStatus.REQUESTED_RANGE_NOT_SATISFIABLE.value())
                         .message(exception.getMessage())
                         .build(),
@@ -35,11 +36,11 @@ public class ExceptionsHandler {
     }
 
 
-    @ExceptionHandler(InvalidDataException.class)
-    public ResponseEntity<ExceptionsDetails> handlerInvalidData(InvalidDataException exception){
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ResponseEntity<ExceptionsDetails> handlerInvalidData(MethodArgumentNotValidException exception){
         return new ResponseEntity<>(
                 ExceptionsDetails.builder()
-                        .erro("Dados errados")
+                        .erro("ERRO - DADOS INVÁLIDOS")
                         .statusHttp(HttpStatus.BAD_REQUEST.value())
                         .message(exception.getMessage())
                         .build(),
