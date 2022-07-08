@@ -16,9 +16,14 @@ public class ProdutoServiceImp implements ProdutoService{
     private ProdutoRepo produtoRepo;
 
 
+
     @Override
-    public void cadastrarProduto(Produto produto) {
-            produtoRepo.cadastrarProduto(produto);
+    public ProdutoDto cadastrarProduto(Produto produto) {
+        Produto produtoCadastrado = produtoRepo.cadastrarProduto(produto);
+
+        ProdutoDto produtoDto = new ProdutoDto(produto);
+
+        return produtoDto;
     }
 
     @Override
@@ -60,5 +65,7 @@ public class ProdutoServiceImp implements ProdutoService{
                 .collect(Collectors.toList());
         return listaDto;
     }
+
+
 
 }

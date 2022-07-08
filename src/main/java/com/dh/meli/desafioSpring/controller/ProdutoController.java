@@ -20,8 +20,8 @@ public class ProdutoController {
 
     @PostMapping("/insert-articles-request")
     @ResponseStatus(HttpStatus.OK)
-    public void cadastrarProduto(@RequestBody Produto produto){
-        service.cadastrarProduto(produto);
+    public ResponseEntity<ProdutoDto> cadastrarProduto(@RequestBody Produto produto){
+        return ResponseEntity.ok(service.cadastrarProduto(produto));
 
     }
 

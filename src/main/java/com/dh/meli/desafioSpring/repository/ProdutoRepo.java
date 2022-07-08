@@ -17,7 +17,7 @@ public class ProdutoRepo {
 
     private final String LINKFILE = "src/main/resources/produtos.json";
 
-    public void cadastrarProduto(Produto produto) {
+    public Produto cadastrarProduto(Produto produto) {
         ObjectMapper mapper = new ObjectMapper();
         ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());
         List<Produto> listaAtual = getAll();
@@ -29,6 +29,7 @@ public class ProdutoRepo {
         } catch (Exception exception){
         System.out.println("PRODUTO NÃO CADASTRADO! ERRO!");
         }
+        return produto;
 
     }
 
