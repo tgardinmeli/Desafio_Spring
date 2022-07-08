@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @Getter
@@ -13,8 +15,11 @@ import java.util.List;
 @NoArgsConstructor
 
 public class CarrinhoCompras {
+    @NotNull
     private int id;
+    @NotNull
     private List<Produto> articles;
+    @NotNull
     private double total;
     private static int contador = 1;
 

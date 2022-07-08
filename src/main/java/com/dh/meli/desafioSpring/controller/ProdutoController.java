@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -19,8 +20,8 @@ public class ProdutoController {
 
     @PostMapping("/insert-articles-request")
     @ResponseStatus(HttpStatus.OK)
-    public void cadastrarProduto(@RequestBody Produto produto){
-        service.cadastrarProduto(produto);
+    public ResponseEntity<ProdutoDto> cadastrarProduto(@RequestBody @Valid Produto produto){
+        return ResponseEntity.ok(service.cadastrarProduto(produto)) ;
     }
 
     @GetMapping("/articles")

@@ -17,8 +17,10 @@ public class ProdutoServiceImp implements ProdutoService{
 
 
     @Override
-    public void cadastrarProduto(Produto produto) {
+    public ProdutoDto cadastrarProduto(Produto produto) {
             produtoRepo.cadastrarProduto(produto);
+            ProdutoDto produtoDto = new ProdutoDto(produto);
+            return produtoDto;
     }
 
     @Override
