@@ -4,11 +4,6 @@ import lombok.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
-
-
-
-
-
 /**
  * Classe Produto representa um produto com atributos de
  * id, nome, categoria, marca, preço, quantidade, frete grátis e avaliação.

@@ -1,0 +1,17 @@
+/Users/mmamede/IdeaProjects/Desafio_Spring/src/main/java/com/dh/meli/desafioSpring/service/ProdutoService.java
+/Users/mmamede/IdeaProjects/Desafio_Spring/src/main/java/com/dh/meli/desafioSpring/service/CarrinhoServiceImp.java
+/Users/mmamede/IdeaProjects/Desafio_Spring/src/main/java/com/dh/meli/desafioSpring/controller/ProdutoController.java
+/Users/mmamede/IdeaProjects/Desafio_Spring/src/main/java/com/dh/meli/desafioSpring/handler/NotFoundHandler.java
+/Users/mmamede/IdeaProjects/Desafio_Spring/src/main/java/com/dh/meli/desafioSpring/dto/TicketDto.java
+/Users/mmamede/IdeaProjects/Desafio_Spring/src/main/java/com/dh/meli/desafioSpring/exception/NotFoundException.java
+/Users/mmamede/IdeaProjects/Desafio_Spring/src/main/java/com/dh/meli/desafioSpring/service/ProdutoServiceImp.java
+/Users/mmamede/IdeaProjects/Desafio_Spring/src/main/java/com/dh/meli/desafioSpring/model/Produto.java
+/Users/mmamede/IdeaProjects/Desafio_Spring/src/main/java/com/dh/meli/desafioSpring/dto/CarrinhoDto.java
+/Users/mmamede/IdeaProjects/Desafio_Spring/src/main/java/com/dh/meli/desafioSpring/service/CarrinhoService.java
+/Users/mmamede/IdeaProjects/Desafio_Spring/src/main/java/com/dh/meli/desafioSpring/exception/ExceptionsDetails.java
+/Users/mmamede/IdeaProjects/Desafio_Spring/src/main/java/com/dh/meli/desafioSpring/dto/ProdutoDto.java
+/Users/mmamede/IdeaProjects/Desafio_Spring/src/main/java/com/dh/meli/desafioSpring/dto/RequestProdutoDto.java
+/Users/mmamede/IdeaProjects/Desafio_Spring/src/main/java/com/dh/meli/desafioSpring/model/CarrinhoCompras.java
+/Users/mmamede/IdeaProjects/Desafio_Spring/src/main/java/com/dh/meli/desafioSpring/repository/ProdutoRepo.java
+/Users/mmamede/IdeaProjects/Desafio_Spring/src/main/java/com/dh/meli/desafioSpring/DesafioSpringApplication.java
+/Users/mmamede/IdeaProjects/Desafio_Spring/src/main/java/com/dh/meli/desafioSpring/controller/CarrinhoController.java
