@@ -1,7 +1,6 @@
 package com.dh.meli.desafioSpring.controller;
 
 import com.dh.meli.desafioSpring.dto.ProdutoDto;
-import com.dh.meli.desafioSpring.dto.TicketDto;
 import com.dh.meli.desafioSpring.model.Produto;
 import com.dh.meli.desafioSpring.service.ProdutoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,4 +39,23 @@ public class ProdutoController {
         return ResponseEntity.ok(service.getAll());
     }
 
+    @GetMapping("/articles/filters")
+    public ResponseEntity<List<ProdutoDto>> getByCategoryAndFree
+            (@RequestParam String category, @RequestParam boolean freeShipping){
+        return ResponseEntity.ok(service.getByCategoryAndFree(category, freeShipping));
+    }
+
+    @GetMapping("/articles/filters/order")
+    public ResponseEntity<List<ProdutoDto>> getByCategoryFreeOrdered
+            (@RequestParam String category, @RequestParam boolean freeShipping, @RequestParam int order) {
+        return ResponseEntity.ok(service.getByCategoryFreeOrdered(category, freeShipping, order));
+    }
+
+
+
+    @GetMapping("/articles/filters/1")
+    public ResponseEntity<List<ProdutoDto>> getByCategoryAndPrestige
+            (@RequestParam String category, @RequestParam String prestige){
+        return ResponseEntity.ok(service.getByCategoryAndPrestige(category, prestige));
+    }
 }
