@@ -1,6 +1,7 @@
 package com.dh.meli.desafioSpring.service;
 
 import com.dh.meli.desafioSpring.dto.ProdutoDto;
+import com.dh.meli.desafioSpring.exception.NotFoundException;
 import com.dh.meli.desafioSpring.model.Produto;
 import com.dh.meli.desafioSpring.repository.ProdutoRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +35,7 @@ public class ProdutoServiceImp implements ProdutoService{
                     .collect(Collectors.toList());
 
         } catch(Exception exception){
+            throw new  NotFoundException("Erro do servidor!");
 
         }
         return listaDisponiveisDto;
@@ -50,6 +52,7 @@ public class ProdutoServiceImp implements ProdutoService{
                     .collect(Collectors.toList());
 
         } catch(Exception exception){
+            throw new  NotFoundException("Erro do servidor!");
 
         }
         return listaCategoriaDto;
@@ -74,6 +77,7 @@ public class ProdutoServiceImp implements ProdutoService{
                     .collect(Collectors.toList());
 
         } catch(Exception exception){
+            throw new  NotFoundException("Erro do servidor!");
 
         }
         return listaFiltrosDto;
@@ -90,6 +94,7 @@ public class ProdutoServiceImp implements ProdutoService{
                     .collect(Collectors.toList());
 
         } catch(Exception exception){
+            throw new  NotFoundException("Erro do servidor!");
 
         }
         return listaFiltrosDto;
