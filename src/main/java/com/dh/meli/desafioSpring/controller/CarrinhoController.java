@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -21,7 +22,7 @@ public class CarrinhoController {
 
     @PostMapping("/purchase-request")
     public ResponseEntity<TicketDto> processarCompra
-            (@RequestBody List<RequestProdutoDto> articlesPurchaseRequest){
+            (@Valid @RequestBody List<RequestProdutoDto> articlesPurchaseRequest){
         return ResponseEntity.ok(carrinhoService.processarCompra(articlesPurchaseRequest));
     }
 }
