@@ -9,6 +9,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ * Lista de métodos usados pela camada Service de Carrinho.
+ * Implementação na classe CarrinhoServiceImp
+ */
 public interface CarrinhoService {
     HashMap <Long, Produto>verificarProduto(List<RequestProdutoDto> articlesPurchaseRequest);
     TicketDto processarCompra(List<RequestProdutoDto> articlesPurchaseRequest);
