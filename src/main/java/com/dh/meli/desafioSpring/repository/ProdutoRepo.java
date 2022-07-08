@@ -24,7 +24,7 @@ public class ProdutoRepo {
      * Método cadastrarProduto: faz uma cópia da lista atual de todos os produtos
      * e adiciona um novo produto a essa nova lista.
      * Adiciona o novo produto a produtos.json através do método writeValue.
-     * Em caso de exceção, retorna mensagem de erro. ??
+     * Em caso de exceção, retorna mensagem de erro.
      * @param produto
      */
     public void cadastrarProduto(Produto produto) {

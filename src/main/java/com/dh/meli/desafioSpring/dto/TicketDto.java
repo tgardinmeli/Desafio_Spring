@@ -9,7 +9,7 @@ import lombok.Setter;
 
 
 /**
- * Receber o carrinho de compras do usuario (já conferido se tem os itens pedidos no estoque.
+ * Receber o carrinho de compras do usuario (já conferido se tem os itens pedidos no estoque).
  */
 @Getter
 @Setter
