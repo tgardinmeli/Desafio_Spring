@@ -45,9 +45,9 @@ public class CarrinhoServiceImp implements CarrinhoService{
 
     @Override
     public TicketDto processarCompra(List<RequestProdutoDto> articlesPurchaseRequest) {
-        HashMap<Long, Produto> hashRecebido = verificarProduto(articlesPurchaseRequest);
 
-        if(hashRecebido != null){
+        if(!articlesPurchaseRequest.isEmpty()){
+            HashMap<Long, Produto> hashRecebido = verificarProduto(articlesPurchaseRequest);
             // ticket (id e articles []  total
             List<Produto> produtos = new ArrayList<Produto>();
 
