@@ -11,5 +11,5 @@ import lombok.Data;
 public class ExceptionsDetails {
     private String erro;
     private int statusHttp;
-    private String mensagem;
+    private String message;
 }
