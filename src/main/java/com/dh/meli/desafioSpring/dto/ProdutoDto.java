@@ -5,6 +5,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * ProdutoDto
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -14,6 +17,11 @@ public class ProdutoDto {
     private Double price;
     private Integer quantity; // escolha do grupo de retornar a quantidade
 
+
+    /**
+     *
+     * @param produto
+     */
     public ProdutoDto(Produto produto) {
         this.name = produto.getName();
         this.category = produto.getCategory();
