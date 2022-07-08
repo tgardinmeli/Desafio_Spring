@@ -13,11 +13,6 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
-//   ClienteDto cadastrarCliente(Cliente cliente);
-//    List<ClienteDto> getAll();
-//    List<ClienteDto> getClienteById(Long clienteId);
-//    List<ClienteDto> getByEstado(String estado);
-//    List<ClienteDto> getByNome(String nome);
 
 @RestController
 @RequestMapping("/api/v1")
@@ -37,9 +32,19 @@ public class ClienteController {
         return ResponseEntity.ok(clienteService.getAll());
     }
 
-    @GetMapping("/clientes/{id}")
+    @GetMapping("/clientes/id/{id}")
     public ResponseEntity<ClienteDto> getClienteById(@PathVariable String id) {
         Long idLong = Long.parseLong(id);
         return ResponseEntity.ok(clienteService.getClienteById(idLong));
+    }
+
+    @GetMapping("/clientes/estado/{estado}")
+    public ResponseEntity<List<ClienteDto>> getClienteByEstado(@PathVariable String estado) {
+        return ResponseEntity.ok(clienteService.getByEstado(estado));
+    }
+
+    @GetMapping("/clientes/nome/{nome}")
+    public ResponseEntity<List<ClienteDto>> getClienteByNome(@PathVariable String nome) {
+        return ResponseEntity.ok(clienteService.getByNome(nome));
     }
 }
