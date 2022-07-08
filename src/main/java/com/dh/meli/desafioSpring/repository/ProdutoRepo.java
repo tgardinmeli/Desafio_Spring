@@ -1,5 +1,6 @@
 package com.dh.meli.desafioSpring.repository;
 
+import com.dh.meli.desafioSpring.exception.NotFoundException;
 import com.dh.meli.desafioSpring.model.Produto;
 import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -37,7 +38,8 @@ public class ProdutoRepo {
             writer.writeValue(new File(LINKFILE), listaCopia);
 
         } catch (Exception exception){
-            System.out.println("PRODUTO NÃO CADASTRADO! ERRO!");
+
+            throw new NotFoundException("PRODUTO NÃO CADASTRADO! ERRO!");
         }
     }
 
@@ -51,7 +53,7 @@ public class ProdutoRepo {
         try {
             writer.writeValue(new File(LINKFILE), produtos);
         } catch (Exception exception){
-            System.out.println("Deu ruim");
+            throw new NotFoundException("Não foi possivel atualizar a lista");
         }
     }
 
@@ -67,7 +69,7 @@ public class ProdutoRepo {
             lista = Arrays.asList(mapper.readValue(new File(LINKFILE), Produto[].class));
 
         } catch(Exception ex){
-
+            throw new NotFoundException("Não foi possivel buscar a lista");
         }
         return lista;
     }
