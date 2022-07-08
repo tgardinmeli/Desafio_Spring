@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 import java.util.List;
 
+/**
+ * Controller de carrinho.
+ */
 @RestController
 @RequestMapping("/api/v1")
 public class CarrinhoController {

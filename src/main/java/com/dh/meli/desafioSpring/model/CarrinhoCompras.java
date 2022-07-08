@@ -25,6 +25,11 @@ public class CarrinhoCompras {
     private double total;
     private static int contador = 1;
 
+    /**
+     * Seta atributos de carrinho.
+     * @param articles
+     * @param total
+     */
     public CarrinhoCompras(List<Produto> articles, double total){
         this.id = this.contador;
         this.articles = articles;

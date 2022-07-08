@@ -8,8 +8,9 @@ import lombok.Setter;
 import java.util.ArrayList;
 import java.util.List;
 
+
 /**
- * Recebe o payload do usuário.
+ * Recebe payload do usuário.
  */
 @Getter
 @Setter

@@ -21,7 +21,7 @@ public class ProdutoRepo {
     private final String LINKFILE = "src/main/resources/produtos.json";
 
     /**
-     * Método cadastrarProduto: faz uma cópia da lista atual de todos os produtos
+     * Inicia com uma cópia da lista atual de todos os produtos
      * e adiciona um novo produto a essa nova lista.
      * Adiciona o novo produto a produtos.json através do método writeValue.
      * Em caso de exceção, retorna mensagem de erro.
@@ -56,7 +56,7 @@ public class ProdutoRepo {
     }
 
     /**
-     * Método getAll: retorna lista de produtos cadastrados em produtos.json
+     * Retorna lista de produtos cadastrados em produtos.json
      * @return lista com todos os produtos cadastrados
      */
     public List<Produto> getAll() {

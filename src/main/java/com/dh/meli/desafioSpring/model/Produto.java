@@ -7,7 +7,6 @@ import javax.validation.constraints.NotNull;
 /**
  * Representa um produto.
  */
-
 @Data
 @Getter
 @Setter
