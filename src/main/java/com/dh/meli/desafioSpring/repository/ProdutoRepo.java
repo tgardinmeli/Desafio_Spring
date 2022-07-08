@@ -12,11 +12,21 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Repositório de Produto
+ */
 @Repository
 public class ProdutoRepo {
 
     private final String LINKFILE = "src/main/resources/produtos.json";
 
+    /**
+     * Inicia com uma cópia da lista atual de todos os produtos
+     * e adiciona um novo produto a essa nova lista.
+     * Adiciona o novo produto a produtos.json através do método writeValue.
+     * Em caso de exceção, retorna mensagem de erro.
+     * @param produto
+     */
     public void cadastrarProduto(Produto produto) {
         ObjectMapper mapper = new ObjectMapper();
         ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());
@@ -31,6 +41,10 @@ public class ProdutoRepo {
         }
     }
 
+    /**
+     * Atualiza lista de produtos no arquivo json.
+     * @param produtos
+     */
     public void atualizarListaProdutos(List<Produto> produtos) {
         ObjectMapper mapper = new ObjectMapper();
         ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());
@@ -41,7 +55,10 @@ public class ProdutoRepo {
         }
     }
 
-
+    /**
+     * Retorna lista de produtos cadastrados em produtos.json
+     * @return lista com todos os produtos cadastrados
+     */
     public List<Produto> getAll() {
         ObjectMapper mapper = new ObjectMapper();
         List<Produto> lista = null;
@@ -54,9 +71,4 @@ public class ProdutoRepo {
         }
         return lista;
     }
-
-
-
-
-
-    }
+}

@@ -1,6 +1,5 @@
 package com.dh.meli.desafioSpring.handler;
 
-import com.dh.meli.desafioSpring.exception.InvalidDataException;
 import com.dh.meli.desafioSpring.exception.NotFoundException;
 import com.dh.meli.desafioSpring.exception.QuantityException;
 import com.dh.meli.desafioSpring.exception.ExceptionsDetails;
@@ -10,9 +9,17 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
+/**
+ * Manipula as exceções.
+ */
 @ControllerAdvice
 public class ExceptionsHandler {
 
+    /**
+     * Manipula exceção de item não encontrado.
+     * @param exception
+     * @return ResponseEntity<ExceptionsDetails>
+     */
     @ExceptionHandler(NotFoundException.class) // pega a classe do Not found generico
     public ResponseEntity<ExceptionsDetails> handlerNotFound(NotFoundException exception) {
         return new ResponseEntity<>(
@@ -24,6 +31,11 @@ public class ExceptionsHandler {
                 HttpStatus.NOT_FOUND); // 4o4
     }
 
+    /**
+     * Manipula exceção de quantidade.
+     * @param exception
+     * @return ResponseEntity<ExceptionsDetails>
+     */
     @ExceptionHandler(QuantityException.class)
     public ResponseEntity<ExceptionsDetails> handlerQuantityException(QuantityException exception){
         return new ResponseEntity<>(
@@ -36,6 +48,11 @@ public class ExceptionsHandler {
     }
 
 
+    /**
+     * Manipula exceção de dados inválidos.
+     * @param exception
+     * @return ResponseEntity<ExceptionsDetails>
+     */
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ExceptionsDetails> handlerInvalidData(MethodArgumentNotValidException exception){
         return new ResponseEntity<>(

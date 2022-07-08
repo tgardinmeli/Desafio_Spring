@@ -6,6 +6,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * Receber carrinho de compras do usuário.
+ */
 @Getter
 @Setter
 @NoArgsConstructor

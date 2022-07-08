@@ -5,6 +5,10 @@ import com.dh.meli.desafioSpring.model.Produto;
 
 import java.util.List;
 
+/**
+ * Lista de métodos usados pela camada Service de Produto.
+ * Implementação na classe ProdutoServiceImp
+ */
 public interface ProdutoService {
     ProdutoDto cadastrarProduto(Produto produto);
     List<ProdutoDto> getAllProdutosDisponiveis();

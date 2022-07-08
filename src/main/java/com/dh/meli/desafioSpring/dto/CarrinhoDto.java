@@ -8,11 +8,15 @@ import lombok.Setter;
 import java.util.ArrayList;
 import java.util.List;
 
+
+/**
+ * Recebe payload do usuário.
+ */
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class CarrinhoDto { // recebe o payload do Usuario
+public class CarrinhoDto { 
     List<RequestProdutoDto> articlesPurchaseRequest = new ArrayList<RequestProdutoDto>();
 
 }
