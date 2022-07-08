@@ -12,4 +12,5 @@ import java.util.List;
 public interface CarrinhoService {
     HashMap <Long, Produto>verificarProduto(List<RequestProdutoDto> articlesPurchaseRequest);
     TicketDto processarCompra(List<RequestProdutoDto> articlesPurchaseRequest);
+
 }
