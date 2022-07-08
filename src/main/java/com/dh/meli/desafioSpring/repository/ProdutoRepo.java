@@ -32,9 +32,17 @@ public class ProdutoRepo {
 
     }
 
-    public List<Produto> getAllCategoria(String categoria) {
-        return null;
+    public void atualizarListaProdutos(List<Produto> produtos) {
+        ObjectMapper mapper = new ObjectMapper();
+        ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());
+        try {
+            writer.writeValue(new File(LINKFILE), produtos);
+
+        } catch (Exception exception){
+            System.out.println("Deu ruim");
+        }
     }
+
 
     public List<Produto> getAll() {
         ObjectMapper mapper = new ObjectMapper();
@@ -48,6 +56,8 @@ public class ProdutoRepo {
         }
         return lista;
     }
+
+
 
 
 

@@ -8,7 +8,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Produto {
-    private long productId;
+    private Long productId;
     private String name;
     private String category;
     private String brand;

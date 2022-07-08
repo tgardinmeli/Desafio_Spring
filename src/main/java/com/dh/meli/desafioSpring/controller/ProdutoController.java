@@ -50,9 +50,6 @@ public class ProdutoController {
             (@RequestParam String category, @RequestParam boolean freeShipping, @RequestParam int order) {
         return ResponseEntity.ok(service.getByCategoryFreeOrdered(category, freeShipping, order));
     }
-
-
-
     @GetMapping("/articles/filters/1")
     public ResponseEntity<List<ProdutoDto>> getByCategoryAndPrestige
             (@RequestParam String category, @RequestParam String prestige){
