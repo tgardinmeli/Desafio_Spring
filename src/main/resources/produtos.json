@@ -31,7 +31,7 @@
   "category" : "Ferramentas",
   "brand" : "Black & Decker",
   "price" : 350.0,
-  "quantity" : 9,
+  "quantity" : 1,
   "freeShipping" : true,
   "prestige" : "***"
 }, {
@@ -40,7 +40,7 @@
   "category" : "Esportes",
   "brand" : "Adidas",
   "price" : 235.0,
-  "quantity" : 4,
+  "quantity" : 2,
   "freeShipping" : true,
   "prestige" : "*****"
 }, {

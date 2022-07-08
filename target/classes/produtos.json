@@ -1,15 +1,24 @@
 [ {
+  "productId" : null,
+  "name" : null,
+  "category" : null,
+  "brand" : null,
+  "price" : null,
+  "quantity" : null,
+  "freeShipping" : null,
+  "prestige" : null
+}, {
   "productId" : 1,
   "name" : "Serra de Bancada",
   "category" : "Ferramentas",
   "brand" : "FORTGPRO",
   "price" : 1800.0,
-  "quantity" : 3,
+  "quantity" : 1,
   "freeShipping" : true,
   "prestige" : "****"
 }, {
   "productId" : 2,
-  "name" : "Serra de Bancada",
+  "name" : "produto",
   "category" : "Ferramentas",
   "brand" : "FORTGPRO",
   "price" : 1800.0,
@@ -22,7 +31,7 @@
   "category" : "Ferramentas",
   "brand" : "Black & Decker",
   "price" : 350.0,
-  "quantity" : 10,
+  "quantity" : 1,
   "freeShipping" : true,
   "prestige" : "***"
 }, {
@@ -31,7 +40,7 @@
   "category" : "Esportes",
   "brand" : "Adidas",
   "price" : 235.0,
-  "quantity" : 6,
+  "quantity" : 2,
   "freeShipping" : true,
   "prestige" : "*****"
 }, {
@@ -106,31 +115,4 @@
   "quantity" : 9,
   "freeShipping" : true,
   "prestige" : "***"
-}, {
-  "productId" : 2,
-  "name" : "Serra de Bancada",
-  "category" : "Ferramentas",
-  "brand" : "FORTGPRO",
-  "price" : 1800.0,
-  "quantity" : 5,
-  "freeShipping" : true,
-  "prestige" : "****"
-}, {
-  "productId" : null,
-  "name" : null,
-  "category" : null,
-  "brand" : null,
-  "price" : null,
-  "quantity" : null,
-  "freeShipping" : null,
-  "prestige" : null
-}, {
-  "productId" : 2,
-  "name" : "produto",
-  "category" : "Ferramentas",
-  "brand" : "FORTGPRO",
-  "price" : 1800.0,
-  "quantity" : 5,
-  "freeShipping" : true,
-  "prestige" : "****"
 } ]

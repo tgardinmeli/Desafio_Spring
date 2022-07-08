@@ -3,6 +3,7 @@ package com.dh.meli.desafioSpring.service;
 import com.dh.meli.desafioSpring.dto.RequestProdutoDto;
 import com.dh.meli.desafioSpring.dto.TicketDto;
 import com.dh.meli.desafioSpring.exception.NotFoundException;
+import com.dh.meli.desafioSpring.exception.QuantityException;
 import com.dh.meli.desafioSpring.model.CarrinhoCompras;
 import com.dh.meli.desafioSpring.model.Produto;
 import com.dh.meli.desafioSpring.repository.ProdutoRepo;
@@ -31,12 +32,12 @@ public class CarrinhoServiceImp implements CarrinhoService{
         for(RequestProdutoDto produto : articlesPurchaseRequest){
             Long i = produto.getProductId();
             if(hash.containsKey(i)){
-                if(hash.get(i).getQuantity() < produto.getQuantity()){
-                    return null ;
+                if(hash.get(i).getQuantity() < produto.getQuantity()){ // quantidade insuficiente
+                    throw new QuantityException();
                 }
 
-            }else {
-                return null;
+            }else { // não encontrado
+                throw new NotFoundException();
             }
         }
         return hash;
@@ -63,7 +64,7 @@ public class CarrinhoServiceImp implements CarrinhoService{
             return ticket;
         }
         else{
-            throw new NotFoundException("Produto não tem estoque!!!!!!!!!");
+            throw new NotFoundException();
         }
     }
 
