@@ -1,6 +1,7 @@
 package com.dh.meli.desafioSpring.service;
 
 import com.dh.meli.desafioSpring.dto.ProdutoDto;
+import com.dh.meli.desafioSpring.exception.NotFoundException;
 import com.dh.meli.desafioSpring.model.Produto;
 import com.dh.meli.desafioSpring.repository.ProdutoRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,9 +17,13 @@ public class ProdutoServiceImp implements ProdutoService{
     private ProdutoRepo produtoRepo;
 
 
+
     @Override
-    public void cadastrarProduto(Produto produto) {
-            produtoRepo.cadastrarProduto(produto);
+    public ProdutoDto cadastrarProduto(Produto produto) {
+        Produto produtoCadastrado = produtoRepo.cadastrarProduto(produto);
+        ProdutoDto produtoDto = new ProdutoDto(produto);
+
+        return produtoDto;
     }
 
     @Override
@@ -61,6 +66,8 @@ public class ProdutoServiceImp implements ProdutoService{
         return listaDto;
     }
 
+<<<<<<< HEAD
+=======
     @Override
     public List<ProdutoDto> getByCategoryAndFree(String category, boolean freeShipping) {
         List<Produto> allProducts = produtoRepo.getAll();
@@ -110,6 +117,7 @@ public class ProdutoServiceImp implements ProdutoService{
                 return null;
         }
     }
+>>>>>>> accb281b809da10f34c8ddedfcc7143b28294377
 
 }
 

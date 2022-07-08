@@ -1,10 +1,18 @@
 [ {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> b5327234810f8d42f489900eb6944692a8156ef0
   "productId" : 1,
   "name" : "Serra de Bancada",
   "category" : "Ferramentas",
   "brand" : "FORTGPRO",
   "price" : 1800.0,
+<<<<<<< HEAD
   "quantity" : 5,
+=======
+  "quantity" : 2,
+>>>>>>> b5327234810f8d42f489900eb6944692a8156ef0
   "freeShipping" : true,
   "prestige" : "****"
 }, {
@@ -13,7 +21,11 @@
   "category" : "Ferramentas",
   "brand" : "Black & Decker",
   "price" : 500.0,
+<<<<<<< HEAD
   "quantity" : 7,
+=======
+  "quantity" : 2,
+>>>>>>> b5327234810f8d42f489900eb6944692a8156ef0
   "freeShipping" : true,
   "prestige" : "****"
 }, {
@@ -27,6 +39,7 @@
   "prestige" : "***"
 }, {
   "productId" : 4,
+<<<<<<< HEAD
   "name" : "Chuteira",
   "category" : "Esportes",
   "brand" : "Adidas",
@@ -34,6 +47,15 @@
   "quantity" : 6,
   "freeShipping" : true,
   "prestige" : "*****"
+=======
+  "name" : "Sold out",
+  "category" : "Test",
+  "brand" : "Black & Decker",
+  "price" : 350.0,
+  "quantity" : 0,
+  "freeShipping" : true,
+  "prestige" : "***"
+>>>>>>> b5327234810f8d42f489900eb6944692a8156ef0
 }, {
   "productId" : 5,
   "name" : "Mini Cama elastica",
@@ -44,6 +66,7 @@
   "freeShipping" : true,
   "prestige" : "*****"
 }, {
+<<<<<<< HEAD
   "productId" : 6,
   "name" : "Camiseta",
   "category" : "Esportes",
@@ -106,6 +129,15 @@
   "quantity" : 9,
   "freeShipping" : true,
   "prestige" : "***"
+=======
+  "productId" : 10,
+  "name" : "SUPER Cama elastica",
+  "category" : "Esportes",
+  "brand" : "Starboard",
+  "price" : 189876.0,
+  "quantity" : 100,
+  "freeShipping" : true,
+  "prestige" : "*****"
 }, {
   "productId" : null,
   "name" : null,
@@ -115,4 +147,149 @@
   "quantity" : null,
   "freeShipping" : null,
   "prestige" : null
+>>>>>>> b5327234810f8d42f489900eb6944692a8156ef0
+}, {
+  "productId" : null,
+  "name" : null,
+  "category" : null,
+  "brand" : null,
+  "price" : null,
+  "quantity" : null,
+  "freeShipping" : null,
+  "prestige" : null
+<<<<<<< HEAD
 } ]
+=======
+}, {
+  "productId" : 124,
+  "name" : "Solda",
+  "category" : "Test",
+  "brand" : "Black & Decker",
+  "price" : 350.0,
+  "quantity" : 0,
+  "freeShipping" : true,
+  "prestige" : "***"
+} ]
+=======
+  "productId": 1,
+  "name": "Serra de Bancada",
+  "category": "Ferramentas",
+  "brand": "FORTGPRO",
+  "price": 1800.00,
+  "quantity": 5,
+  "freeShipping": true,
+  "prestige": "****"
+},
+  {
+    "productId": 2,
+    "name": "Furadeira",
+    "category": "Ferramentas",
+    "brand": "Black & Decker",
+    "price": 500,
+    "quantity": 7,
+    "freeShipping": true,
+    "prestige": "****"
+  },
+  {
+    "productId": 3,
+    "name": "Soldadora",
+    "category": "Ferramentas",
+    "brand": "Black & Decker",
+    "price": 350.00,
+    "quantity": 10,
+    "freeShipping": true,
+    "prestige": "***"
+  },
+  {
+    "productId": 4,
+    "name": "Chuteira",
+    "category": "Esportes",
+    "brand": "Adidas",
+    "price": 235.00,
+    "quantity": 6,
+    "freeShipping": true,
+    "prestige": "*****"
+  },
+  {
+    "productId": 5,
+    "name": "Mini Cama elastica",
+    "category": "Esportes",
+    "brand": "Starboard",
+    "price": 183.00,
+    "quantity": 4,
+    "freeShipping": true,
+    "prestige": "*****"
+  },
+  {
+    "productId": 6,
+    "name": "Camiseta",
+    "category": "Esportes",
+    "brand": "Topper",
+    "price": 80.00,
+    "quantity": 2,
+    "freeShipping": false,
+    "prestige": "***"
+  },
+  {
+    "productId": 7,
+    "name": "Redmi Note 9",
+    "category": "Celulares",
+    "brand": "Xiaomi",
+    "price": 2800.00,
+    "quantity": 15,
+    "freeShipping": true,
+    "prestige": "****"
+  },
+  {
+    "productId": 8,
+    "name": "Smartwatch",
+    "category": "Celulares",
+    "brand": "Noga",
+    "price": 1200.00,
+    "quantity": 5,
+    "freeShipping": true,
+    "prestige": "**"
+  },
+  {
+    "productId": 9,
+    "name": "Camisa",
+    "category": "Roupas",
+    "brand": "Fila",
+    "price": 79.00,
+    "quantity": 2,
+    "freeShipping": false,
+    "prestige": "***"
+  },
+  {
+    "productId": 10,
+    "name": "Calcas",
+    "category": "Roupas",
+    "brand": "Oakley",
+    "price": 73.00,
+    "quantity": 6,
+    "freeShipping": false,
+    "prestige": "***"
+  },
+  {
+    "productId": 11,
+    "name": "Meias",
+    "category": "Roupas",
+    "brand": "Gonew",
+    "price": 10.00,
+    "quantity": 8,
+    "freeShipping": false,
+    "prestige": "*"
+  },
+  {
+    "productId": 12,
+    "name": "Shorts",
+    "category": "Roupas",
+    "brand": "Lacoste",
+    "price": 275.00,
+    "quantity": 9,
+    "freeShipping": true,
+    "prestige": "***"
+  } ]
+
+>>>>>>> accb281b809da10f34c8ddedfcc7143b28294377
+>>>>>>> b5327234810f8d42f489900eb6944692a8156ef0

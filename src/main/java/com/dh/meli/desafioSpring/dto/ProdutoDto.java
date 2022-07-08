@@ -9,12 +9,14 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class ProdutoDto {
-    private String name;
-    private String category;
-    private Double price;
-    private Integer quantity; // escolha do grupo de retornar a quantidade
+    private Long productId; // do requisito
+    private String name; // do requisito
+    private String category; // escolha do grupo de retornar
+    private Double price; // escolha do grupo de retornar
+    private Integer quantity;  // do requisito
 
     public ProdutoDto(Produto produto) {
+        this.productId = produto.getProductId();
         this.name = produto.getName();
         this.category = produto.getCategory();
         this.price = produto.getPrice();

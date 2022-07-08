@@ -1,4 +1,87 @@
 [ {
+<<<<<<< HEAD
+  "productId" : 1,
+  "name" : "Serra de Bancada",
+  "category" : "Ferramentas",
+  "brand" : "FORTGPRO",
+  "price" : 1800.0,
+  "quantity" : 2,
+  "freeShipping" : true,
+  "prestige" : "****"
+}, {
+  "productId" : 2,
+  "name" : "Furadeira",
+  "category" : "Ferramentas",
+  "brand" : "Black & Decker",
+  "price" : 500.0,
+  "quantity" : 2,
+  "freeShipping" : true,
+  "prestige" : "****"
+}, {
+  "productId" : 3,
+  "name" : "Soldadora",
+  "category" : "Ferramentas",
+  "brand" : "Black & Decker",
+  "price" : 350.0,
+  "quantity" : 10,
+  "freeShipping" : true,
+  "prestige" : "***"
+}, {
+  "productId" : 4,
+  "name" : "Sold out",
+  "category" : "Test",
+  "brand" : "Black & Decker",
+  "price" : 350.0,
+  "quantity" : 0,
+  "freeShipping" : true,
+  "prestige" : "***"
+}, {
+  "productId" : 5,
+  "name" : "Mini Cama elastica",
+  "category" : "Esportes",
+  "brand" : "Starboard",
+  "price" : 183.0,
+  "quantity" : 4,
+  "freeShipping" : true,
+  "prestige" : "*****"
+}, {
+  "productId" : 10,
+  "name" : "SUPER Cama elastica",
+  "category" : "Esportes",
+  "brand" : "Starboard",
+  "price" : 189876.0,
+  "quantity" : 100,
+  "freeShipping" : true,
+  "prestige" : "*****"
+}, {
+  "productId" : null,
+  "name" : null,
+  "category" : null,
+  "brand" : null,
+  "price" : null,
+  "quantity" : null,
+  "freeShipping" : null,
+  "prestige" : null
+}, {
+  "productId" : null,
+  "name" : null,
+  "category" : null,
+  "brand" : null,
+  "price" : null,
+  "quantity" : null,
+  "freeShipping" : null,
+  "prestige" : null
+}, {
+  "productId" : 124,
+  "name" : "Solda",
+  "category" : "Test",
+  "brand" : "Black & Decker",
+  "price" : 350.0,
+  "quantity" : 0,
+  "freeShipping" : true,
+  "prestige" : "***"
+} ]
+=======
   "productId": 1,
   "name": "Serra de Bancada",
   "category": "Ferramentas",
@@ -119,3 +202,4 @@
     "prestige": "***"
   } ]
 
+>>>>>>> accb281b809da10f34c8ddedfcc7143b28294377
