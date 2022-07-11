@@ -28,5 +28,4 @@ public class Produto {
     private Boolean freeShipping;
     @NotNull @NotEmpty
     private String prestige;
-
 }

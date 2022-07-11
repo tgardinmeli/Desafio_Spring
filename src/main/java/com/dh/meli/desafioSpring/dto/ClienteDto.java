@@ -12,7 +12,6 @@ public class ClienteDto {
     private String nome;
     private String estado;
 
-
     public ClienteDto(Cliente cliente){
         this.nome = cliente.getNome();
         this.estado = cliente.getEstado();

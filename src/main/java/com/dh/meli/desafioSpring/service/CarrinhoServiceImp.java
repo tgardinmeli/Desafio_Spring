@@ -50,8 +50,7 @@ public class CarrinhoServiceImp implements CarrinhoService{
                 if(hash.get(i).getQuantity() < produto.getQuantity()){ // quantidade insuficiente
                     throw new QuantityException("Quantidade insuficiente no estoque");
                 }
-
-            }else { // não encontrado
+            } else { // não encontrado
                 throw new NotFoundException("Item não encontrado");
             }
         }
@@ -73,7 +72,7 @@ public class CarrinhoServiceImp implements CarrinhoService{
 
         if(!articlesPurchaseRequest.isEmpty()){
             HashMap<Long, Produto> hashRecebido = verificarProduto(articlesPurchaseRequest);
-            // ticket (id e articles []  total
+
             List<Produto> produtos = new ArrayList<Produto>();
 
             articlesPurchaseRequest.stream().forEach(p -> {
@@ -88,7 +87,7 @@ public class CarrinhoServiceImp implements CarrinhoService{
             atualizarListaJson(hashRecebido, verificarProduto(articlesPurchaseRequest));
             return ticket;
         }
-        else{
+        else {
             throw new NotFoundException("Você não incluiu produtos no seu carrinho!");
         }
     }
@@ -110,8 +109,6 @@ public class CarrinhoServiceImp implements CarrinhoService{
                 produtosAtualizados.add(hashOriginal.get(key));
             }
         }
-
         produtoRepo.atualizarListaProdutos(produtosAtualizados);
-        // escreve no json com lista produtosAtualizados
     }
 }

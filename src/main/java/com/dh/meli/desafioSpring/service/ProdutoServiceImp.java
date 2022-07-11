@@ -19,7 +19,6 @@ public class ProdutoServiceImp implements ProdutoService{
     @Autowired
     private ProdutoRepo produtoRepo;
 
-
     /**
      * Chama o método em ProdutoRepo para cadastro de produto.
      * @param produto
@@ -48,10 +47,8 @@ public class ProdutoServiceImp implements ProdutoService{
                     .filter(p -> p.getQuantity() > 0 )
                     .map(ProdutoDto::new)
                     .collect(Collectors.toList());
-
         } catch(Exception exception){
             throw new  NotFoundException("Erro do servidor!");
-
         }
         return listaDisponiveisDto;
     }
@@ -74,10 +71,8 @@ public class ProdutoServiceImp implements ProdutoService{
                     .filter(p -> p.getCategory().equalsIgnoreCase(categoria) )
                     .map(ProdutoDto::new)
                     .collect(Collectors.toList());
-
         } catch(Exception exception){
             throw new  NotFoundException("Erro do servidor!");
-
         }
         return listaCategoriaDto;
     }
@@ -118,7 +113,6 @@ public class ProdutoServiceImp implements ProdutoService{
 
         } catch(Exception exception){
             throw new  NotFoundException("Erro do servidor!");
-
         }
         return listaFiltrosDto;
     }
@@ -142,10 +136,8 @@ public class ProdutoServiceImp implements ProdutoService{
                     .filter(p -> p.getCategory().equalsIgnoreCase(category) && p.getPrestige().equals(prestige))
                     .map(ProdutoDto::new)
                     .collect(Collectors.toList());
-
         } catch(Exception exception){
             throw new  NotFoundException("Erro do servidor!");
-
         }
         return listaFiltrosDto;
     }
@@ -177,6 +169,4 @@ public class ProdutoServiceImp implements ProdutoService{
                 return null;
         }
     }
-
 }
-

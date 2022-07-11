@@ -32,13 +32,12 @@ public class ProdutoRepo {
         ObjectMapper mapper = new ObjectMapper();
         ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());
         List<Produto> listaAtual = getAll();
+
         try {
             List<Produto> listaCopia = new ArrayList<>(listaAtual);
             listaCopia.add(produto);
             writer.writeValue(new File(LINKFILE), listaCopia);
-
-        } catch (Exception exception){
-
+        } catch (Exception exception) {
             throw new NotFoundException("PRODUTO NÃO CADASTRADO! ERRO!");
         }
     }
@@ -50,6 +49,7 @@ public class ProdutoRepo {
     public void atualizarListaProdutos(List<Produto> produtos) {
         ObjectMapper mapper = new ObjectMapper();
         ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());
+
         try {
             writer.writeValue(new File(LINKFILE), produtos);
         } catch (Exception exception){
@@ -67,7 +67,6 @@ public class ProdutoRepo {
 
         try{
             lista = Arrays.asList(mapper.readValue(new File(LINKFILE), Produto[].class));
-
         } catch(Exception ex){
             throw new NotFoundException("Não foi possivel buscar a lista");
         }
