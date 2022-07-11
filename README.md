@@ -35,4 +35,6 @@ compra existe um valor total acumulado e devolvido ao utilizador.
 - [@maria-mamede](https://github.com/maria-mamede)
 - [@tgardinmeli](https://github.com/tgardinmeli)
 
+[Arquivos JSON Postman](https://github.com/tgardinmeli/Desafio_Spring/tree/main/src/main/resources/postman)
+
 
