@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "c059c601-319b-428c-83d2-2be3b7eb1a8e",
-		"name": "Desafio_Spring",
+		"_postman_id": "c6a23849-51ea-4bb3-8813-49b899e067eb",
+		"name": "Desafio_Spring Copy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -178,6 +178,126 @@
 						"api",
 						"v1",
 						"purchase-request"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar um cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"clienteID\" : 7,\n    \"nome\" : \"Mauri Klein\",\n    \"estado\" : \"Santa Catarina\",\n    \"cpf\" : \"089.554.369-98\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/insert-client-request",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"insert-client-request"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista de todos os clientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/clientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Cliente pelo ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/clientes/id/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"clientes",
+						"id",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Cliente pelo Estado",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/clientes/estado/Santa Catarina",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"clientes",
+						"estado",
+						"Santa Catarina"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Cliente pelo Nome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/clientes/nome/Gabriel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"clientes",
+						"nome",
+						"Gabriel"
 					]
 				}
 			},

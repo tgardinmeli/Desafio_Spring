@@ -17,7 +17,6 @@ public class ProdutoDto {
     private Double price;
     private Integer quantity; // escolha do grupo de retornar a quantidade
 
-
     /**
      * Seta o ProdutoDto com informações do Produto.
      * @param produto

@@ -20,26 +20,25 @@ public class ClienteRepo {
         ObjectMapper mapper = new ObjectMapper();
         ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());
         List<Cliente> listaAtual = getAll();
+
         try {
             List<Cliente> listaCopia = new ArrayList<>(listaAtual);
             listaCopia.add(cliente);
             writer.writeValue(new File(LINKCLIENTE), listaCopia);
-
         } catch (Exception exception){
             System.out.println("Cliente não cadastrao");
         }
     }
+
     public List<Cliente> getAll() {
         ObjectMapper mapper = new ObjectMapper();
         List<Cliente> lista = null;
 
         try{
             lista = Arrays.asList(mapper.readValue(new File(LINKCLIENTE), Cliente[].class));
-
         } catch(Exception ex){
 
         }
         return lista;
     }
-
 }

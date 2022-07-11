@@ -14,17 +14,9 @@ import java.util.stream.Stream;
 
 @Service
 public class ClienteServiceImp implements ClienteService{
-    // metodos que existem na interface:
-    //    ClienteDto cadastrarCliente(Cliente cliente);
-    //    List<ClienteDto> getAll();
-    //    List<ClienteDto> getClienteById(Long clienteId);
-    //    List<ClienteDto> getByEstado(String estado);
-    //    List<ClienteDto> getByNome(String nome);
 
     @Autowired
     private ClienteRepo clienteRepo;
-
-
 
     @Override
     public List<ClienteDto> getAll(){

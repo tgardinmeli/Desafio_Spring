@@ -28,9 +28,4 @@
   "nome" : "Adão Wapnyk",
   "estado" : "São Paulo",
   "cpf" : "793.335.487-86"
-}, {
-  "clienteID" : 7,
-  "nome" : "Mauri professor",
-  "estado" : "Santa Catarina",
-  "cpf" : "089.554.369-98"
 } ]

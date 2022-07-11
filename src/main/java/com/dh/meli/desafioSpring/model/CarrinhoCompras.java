@@ -36,5 +36,4 @@ public class CarrinhoCompras {
         this.total = total;
         contador++;
     }
-
 }

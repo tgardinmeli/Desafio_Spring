@@ -18,5 +18,4 @@ import java.util.List;
 @AllArgsConstructor
 public class CarrinhoDto { 
     List<RequestProdutoDto> articlesPurchaseRequest = new ArrayList<RequestProdutoDto>();
-
 }
