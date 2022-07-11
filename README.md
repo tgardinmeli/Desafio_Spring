@@ -26,6 +26,9 @@ disponível.
 - BÔNUS: Permite a utilização de um “carrinho de compras” onde para cada pedido de
 compra existe um valor total acumulado e devolvido ao utilizador. 
 
+
+[Arquivos JSON Postman](https://github.com/tgardinmeli/Desafio_Spring/tree/main/src/main/resources/postman)
+
 ## Autores
 
 - [@adaowap](https://www.github.com/adaowap)
@@ -35,6 +38,5 @@ compra existe um valor total acumulado e devolvido ao utilizador.
 - [@maria-mamede](https://github.com/maria-mamede)
 - [@tgardinmeli](https://github.com/tgardinmeli)
 
-[Arquivos JSON Postman](https://github.com/tgardinmeli/Desafio_Spring/tree/main/src/main/resources/postman)
 
 
