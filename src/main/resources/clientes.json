@@ -1,0 +1,31 @@
+[ {
+  "clienteID" : 1,
+  "nome" : "Gabriel Medeiros",
+  "estado" : "Goiás",
+  "cpf" : "784.564.225-86"
+}, {
+  "clienteID" : 2,
+  "nome" : "Tatiane Gardin",
+  "estado" : "São Paulo",
+  "cpf" : "854.658.447-59"
+}, {
+  "clienteID" : 3,
+  "nome" : "Danielen Nunes",
+  "estado" : "Santa Catarina",
+  "cpf" : "568.487.356-94"
+}, {
+  "clienteID" : 4,
+  "nome" : "Maria Mamede",
+  "estado" : "São Paulo",
+  "cpf" : "057.821.357-62"
+}, {
+  "clienteID" : 5,
+  "nome" : "Julia Herbele",
+  "estado" : "Santa Catarina",
+  "cpf" : "089.554.369-98"
+}, {
+  "clienteID" : 6,
+  "nome" : "Adão Wapnyk",
+  "estado" : "São Paulo",
+  "cpf" : "793.335.487-86"
+} ]
